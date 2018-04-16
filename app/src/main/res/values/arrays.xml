@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="floor_fields">
+        <item>Parking</item>
+        <item>Basement</item>
+        <item>Ground Floor</item>
+        <item>Floor 01</item>
+        <item>Floor 02</item>
+        <item>Floor 03</item>
+        <item>Floor 04</item>
+        <item>Floor 05</item>
+        <item>Floor 06</item>
+        <item>Floor 07</item>
+        <item>Floor 08</item>
+        <item>Floor 09</item>
+        <item>Floor 10</item>
+    </string-array>
+    <string-array name="floor_regions">
+        <item>North</item>
+        <item>East</item>
+        <item>West</item>
+        <item>South</item>
+    </string-array>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WifiDistanceCalculator</string>
+    <string name="permission_error_message">Please grant permissions to continue</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose_floor_title">Select Floor name</string>
+    <string name="choose_floor_region">Select Region name</string>
+    <string name="removal_confirmation_title">Are you sure to remove details?</string>
+    <string name="removal_confirmation_desctiption">This action can not be reverted</string>
+    <string name="locate_yourself">Locate yourself</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="turn_wifi_on">Please turn on wifi to proceed.</string>
+    <string name="welcome_1">Welcome %1$s!</string>
+
+
+</resources>
