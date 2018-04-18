@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import demo.vend.wifidistancecalculator.activity.BaseActivity;
 import demo.vend.wifidistancecalculator.fragments.BaseDialogFragment;
-import demo.vend.wifidistancecalculator.fragments.OmniaBaseFragment;
+import demo.vend.wifidistancecalculator.fragments.BaseFragment;
 import demo.vend.wifidistancecalculator.utils.Constants;
 
 
@@ -30,13 +30,13 @@ public class NavigationManager {
         return mInstance;
     }
 
-    public static final void navigateTo(OmniaBaseFragment mFragment, String mTag){
+    public static final void navigateTo(BaseFragment mFragment, String mTag){
         CURRENT_FRAGMENT_TAG = mTag;
        // mFragmentTransaction.replace(R.id.main_frame_layout, mFragment, mTag);
         navigate(mFragmentTransaction);
     }
 
-    public static final void navigateWithBackStackTo(OmniaBaseFragment mFragment, String mTag){
+    public static final void navigateWithBackStackTo(BaseFragment mFragment, String mTag){
         CURRENT_FRAGMENT_TAG = mTag;
        //mFragmentTransaction.replace(R.id.main_frame_layout, mFragment, mTag);
         mFragmentTransaction.addToBackStack(mTag);

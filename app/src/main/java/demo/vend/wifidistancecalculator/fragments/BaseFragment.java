@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-public class OmniaBaseFragment extends Fragment {
+public class BaseFragment extends Fragment {
 
     protected Context mContext;
     protected View mFragmentView;
