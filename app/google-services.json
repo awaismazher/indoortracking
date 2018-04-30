@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "212098332737",
+    "firebase_url": "https://indoortracking-37448.firebaseio.com",
+    "project_id": "indoortracking-37448",
+    "storage_bucket": "indoortracking-37448.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212098332737:android:55804d836a0ea03f",
+        "android_client_info": {
+          "package_name": "demo.vend.wifidistancecalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212098332737-7c8oabn65ti2dpdm6apfp9g5tlt1ivgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB04oHfiRG5ui--fUaSKRwXu9dogfBFchc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
