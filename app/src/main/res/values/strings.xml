@@ -10,6 +10,7 @@
     <string name="admin_panel">Admin Panel</string>
     <string name="turn_wifi_on">Please turn on wifi to proceed.</string>
     <string name="welcome_1">Welcome %1$s!</string>
+    <string name="male_char"><![CDATA[&#9896]]></string>
 
 
 </resources>

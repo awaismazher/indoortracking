@@ -19,13 +19,13 @@ import demo.vend.wifidistancecalculator.fragments.InfoDialogFragment;
 import demo.vend.wifidistancecalculator.manager.NavigationManager;
 import demo.vend.wifidistancecalculator.service.MonitoringService;
 import demo.vend.wifidistancecalculator.utils.Constants;
-import demo.vend.wifidistancecalculator.callbacks.INetworkClickListener;
+import demo.vend.wifidistancecalculator.callbacks.IItemClickListener;
 import demo.vend.wifidistancecalculator.adapter.NetworkListAdapter;
 import demo.vend.wifidistancecalculator.R;
 import demo.vend.wifidistancecalculator.storage.AppPreference;
 import demo.vend.wifidistancecalculator.utils.DialogUtils;
 
-public class AdminActivity extends BaseActivity implements View.OnClickListener, INetworkClickListener {
+public class AdminActivity extends BaseActivity implements View.OnClickListener, IItemClickListener {
 
     TextView tvStringOfNetworks;
     ScheduledExecutorService ses;
@@ -136,12 +136,15 @@ public class AdminActivity extends BaseActivity implements View.OnClickListener,
 
 
     @Override
-    public void onItemClicked(final ScanResult network) {
-        InfoDialogFragment mInfoDialogFragment = new InfoDialogFragment();
-        Bundle bundle = new Bundle();
-        bundle.putParcelable(Constants.KEY_SCAN_RESULT, network);
-        mInfoDialogFragment.setArguments(bundle);
-        NavigationManager.getInstance(this).showDialogFragment(mInfoDialogFragment, InfoDialogFragment.TAG);
+    public void onItemClicked(final Object object) {
+        if(object instanceof ScanResult) {
+            ScanResult network = (ScanResult) object;
+            InfoDialogFragment mInfoDialogFragment = new InfoDialogFragment();
+            Bundle bundle = new Bundle();
+            bundle.putParcelable(Constants.KEY_SCAN_RESULT, network);
+            mInfoDialogFragment.setArguments(bundle);
+            NavigationManager.getInstance(this).showDialogFragment(mInfoDialogFragment, InfoDialogFragment.TAG);
+        }
 
     }
 }

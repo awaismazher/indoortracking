@@ -10,24 +10,23 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
 import demo.vend.wifidistancecalculator.ApplicationState;
-import demo.vend.wifidistancecalculator.callbacks.INetworkClickListener;
+import demo.vend.wifidistancecalculator.callbacks.IItemClickListener;
 import demo.vend.wifidistancecalculator.R;
 import demo.vend.wifidistancecalculator.manager.DistanceCompartor;
 import demo.vend.wifidistancecalculator.utils.Constants;
 
 public class NetworkListAdapter extends RecyclerView.Adapter<NetworkListAdapter.MyViewHolder> {
     List<ScanResult> scanResultList;
-    INetworkClickListener iNetworkClickListener;
+    IItemClickListener iItemClickListener;
 
-    public NetworkListAdapter(List<ScanResult> scanResultList, INetworkClickListener iNetworkClickListener) {
+    public NetworkListAdapter(List<ScanResult> scanResultList, IItemClickListener iItemClickListener) {
         Collections.sort(scanResultList, new DistanceCompartor());
         this.scanResultList = scanResultList;
-        this.iNetworkClickListener = iNetworkClickListener;
+        this.iItemClickListener = iItemClickListener;
     }
 
     @NonNull
@@ -45,7 +44,7 @@ public class NetworkListAdapter extends RecyclerView.Adapter<NetworkListAdapter.
         holder.tvList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iNetworkClickListener.onItemClicked(scanResultList.get(position));
+                iItemClickListener.onItemClicked(scanResultList.get(position));
             }
         });
     }
